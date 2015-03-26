@@ -16,8 +16,7 @@ Route::post('/oauth/access_token', function() {
 });
 
 Route::get('/oauth/', function() {
-    dd(app()['oauth2-server.authorizer']->validateAccessToken(true, $_GET['access_token']));
-    $accesToken = app()['oauth2-server.authorizer']->setAccessToken();
+    $accesToken = app()['oauth2-server.authorizer']->getClientId();
     // return app()['oauth2-server.authorizer']->getClientId();
 });
 
